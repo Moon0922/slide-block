@@ -21,11 +21,11 @@ body {
     transform: scale(1.05); /* Scales the image to 105% of its original size */
 }
 
-.card:hover .plus-circle {
+.card-block:hover .plus-circle {
     fill: #1A2141; /* Change to desired hover color */
 }
 
-.card:hover .plus-path {
+.card-block:hover .plus-path {
     stroke: white; /* Change to desired hover color */
 }
 
@@ -42,4 +42,8 @@ body {
 
 .circle:hover span{
     color: white;
+}
+
+.block-editor__container img {
+    max-width: none; !important;
 }
