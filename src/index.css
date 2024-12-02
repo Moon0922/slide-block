@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: Montserrat, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.zoom-on-hover {
+    transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+}
+
+.zoom-on-hover:hover {
+    transform: scale(1.05); /* Scales the image to 105% of its original size */
+}
