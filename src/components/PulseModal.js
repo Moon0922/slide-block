@@ -5,7 +5,7 @@ const PulseModal = ({cardsInfo, setModalShow, curIndex, curSubIndex}) => {
 
     return (
         <div className="fixed top-0 left-0 w-full h-full bg-[#000000CC] flex items-center justify-center z-[1000]">
-            <div className="relative mx-[40px] my-[52px] max-w-[1312px] max-h-[802px] rounded-[24px] bg-[#F7F7F7] flex flex-col items-center overflow-hidden">
+            <div className="relative mx-[40px] my-[52px] max-w-[1312px] max-h-[calc(100%-100px)] rounded-[24px] bg-[#F7F7F7] flex flex-col items-center overflow-auto">
                 <div className="flex flex-row items-center justify-center bg-white gap-[16px] w-full rounded-tl-[24px] rounded-tr-[24px] h-[72px]">
                     <img src={cardsInfo[curIndex].icon} alt="SVG Logo"/>
                     <span className="flex flex-col justify-center text-[#1A2141] font-montserrat text-[18px] font-semibold leading-[120%]">

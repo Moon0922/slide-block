@@ -43,16 +43,15 @@ const Timeline = ({cardsInfo, curIndex, curSubIndex, setTranslatePosition}) => {
                 ))}
                 <div/>
 
-                <div className="absolute top-[27px] w-full h-[2px] bg-[#1A2141] z-[5]"></div>
+                <div className="absolute top-[27px] w-full h-[2px] bg-[#A1CFC2] z-[5]"></div>
                 <div
-                    className={`absolute top-[27px] h-[2px] bg-[#A1CFC2] z-[5]`}
+                    className={`absolute top-[27px] h-[2px] bg-[#1A2141] z-[5]`}
                     style={{
-                        width: ` ${100 - (curSubIndex + 1) / (cardsInfo[curIndex].cardInfo.length + 1) * 120 + '%'}`,
-                        marginLeft: `${(curSubIndex + 1) / (cardsInfo[curIndex].cardInfo.length + 1) * 120 + '%'}`
+                        width: `calc(${((curSubIndex + 1) / (cardsInfo[curIndex].cardInfo.length)) * 100 + '%'} - 5px)`,
                     }}
                 ></div>
                 <div className={`absolute h-full flex flex-col justify-center items-center z-[20]`}
-                     style={{left: `${(curSubIndex + 1) / (cardsInfo[curIndex].cardInfo.length + 1) * 120 + '%'}`}}>
+                     style={{left: `calc(${((curSubIndex + 1) / (cardsInfo[curIndex].cardInfo.length)) * 100 + '%'} - 5px)`}}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                         <circle cx="4" cy="4" r="4" fill="#1A2141"/>
                     </svg>
