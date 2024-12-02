@@ -10,7 +10,7 @@ const Timeline = ({cardsInfo, curIndex, curSubIndex, setTranslatePosition}) => {
         setTranslatePosition(position);
     }
     return (
-        <div className="relative flex flex-row justify-between mb-[75px] mt-[58px] h-[56px] mx-[80px] flex-shrink-0">
+        <div className="relative flex flex-row justify-between mb-[clamp(0px,5vw,10px)] mt-[clamp(0px,3vw,10px)] h-[56px] mx-[80px] flex-shrink-0">
             <div className="flex flex-row p-[4px] justify-start gap-[10px] rounded-[12px] border-[2px] border-[#1A2141] bg-white z-[20] cursor-pointer">
                 <div className="flex flex-row gap-[8px] px-[16px] py-[8px] bg-[#1A2141] rounded-[8px]"
                      onClick={() => setPosition(curIndex - 1, 0)}>
@@ -35,9 +35,11 @@ const Timeline = ({cardsInfo, curIndex, curSubIndex, setTranslatePosition}) => {
                     ) : (
                         <div
                             key={i}
-                            className="flex flex-col justify-center items-center bg-[#A1CFC2] w-[34px] h-[34px] flex-shrink-0 rounded-full z-[20] cursor-pointer"
+                            className="circle flex flex-col justify-center items-center bg-[#A1CFC2] w-[34px] h-[34px] flex-shrink-0 rounded-full z-[20] cursor-pointer"
                             onClick={() => setPosition(curIndex, i)}>
-                            <span className="text-[#1A2141] text-center font-montserrat font-semibold text-[18px]">{i + 1}</span>
+                            <div className="flex flex-col justify-center items-center bg-[#A1CFC2] w-[34px] h-[34px] flex-shrink-0 rounded-full">
+                                <span className="text-[#1A2141] text-center font-montserrat font-semibold text-[18px]">{i + 1}</span>
+                            </div>
                         </div>
                     )
                 ))}

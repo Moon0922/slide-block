@@ -71,8 +71,8 @@ const Container = forwardRef(({cardsInfo, curIndex, setCurIndex, curSubIndex, se
 
     return (
 
-        <div className="flex flex-col bg-white flex-grow justify-center">
-            <div className="relative flex flex-row h-[610px] ml-[102px] overflow-hidden"
+        <div className="flex flex-col bg-white flex-grow justify-center max-h-[610px] h-[calc(100%-100px)]">
+            <div className="relative flex flex-row h-full ml-[102px] overflow-hidden"
                  onMouseDown={handleMouseDown}
                  onMouseMove={handleMouseMove}
                  onMouseUp={handleMouseUp}

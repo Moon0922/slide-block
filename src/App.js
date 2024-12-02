@@ -270,7 +270,7 @@ function App() {
 
     return (
         <>
-            <div className="flex flex-col bg-white">
+            <div className="flex flex-col bg-white h-full">
                 <Container
                     cardsInfo={cardsInfo}
                     curIndex={curIndex}
